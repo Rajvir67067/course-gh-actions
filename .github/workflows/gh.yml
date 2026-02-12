@@ -9,6 +9,8 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         steps:
             - run: env
             - run: gh --version
