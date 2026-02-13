@@ -2,7 +2,7 @@ name: thanks
 
 on:
     issues:
-        types: opened
+        types: [opened]
     workflow_dispatch: # manual
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
                 github-token: ${{ secrets.GITHUB_TOKEN }}
                 script: |
                   const { issue_number } = context.issue.number || 2;
-                  console.log(`context: ${JSON.stringify(context)}`);
+                  console.log(`issue number : ${context.issue.issue_number}`);
                   console.log(`issue: ${JSON.stringify(context.issue)}`);
                   console.log(`issue_number: ${issue_number}`);
                   
