@@ -24,26 +24,26 @@ jobs:
 
                   // lookup issue info
                   const issue = await github.rest.issues.get({
-                    owner,
                     repo,
+                    owner,
                     issue_number,
                   });
                   console.log(`issue: ${issue}`);
 
                   // create comment thanking contributor
                     const comment = await github.rest.issues.createComment({
+                      repo,  
                       owner,
-                      repo,
                       issue_number,
-                      body: `Thanks for your contribution!`
+                      body: "Thanks for your contribution!"
                     });
-                    console.log(`comment: ${comment.data.id}`);
-                    console.log(`comment: ${comment.data}`);
+                    console.log(`comment id: ${comment.data.id}`);
+                    console.log(comment.data);
 
                     // auto label
                     github.rest.issues.addLabels({
+                      repo,  
                       owner,
-                      repo,
                       issue_number,
                       labels: ['todo-review']
                     });
