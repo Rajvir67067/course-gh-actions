@@ -3,7 +3,6 @@ name: thanks
 on:
     issues:
         types: [opened]
-    workflow_dispatch: # manual
 
 jobs:
     thanks:
@@ -20,7 +19,7 @@ jobs:
                   console.log(`issue number : ${context.issue.issue_number}`);
                   console.log(`issue: ${JSON.stringify(context.issue)}`);
                   console.log(`issue_number: ${issue_number}`);
-                  
+                  console.log(`context: ${context.payload.issue.number}`);
                   const owner = context.repo.owner;
                   const repo = context.repo.repo;
 
