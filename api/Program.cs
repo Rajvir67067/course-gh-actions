@@ -18,11 +18,6 @@ var newSummaries = new[]
     "Brrrrr", "Yikes", "Frozen", "Hot", "Ouch", "StopIt","StartIt"
 };
 
-var newSummarie = new[]
-{
-    "Freezing", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
