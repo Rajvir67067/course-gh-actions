@@ -3,7 +3,7 @@ name: thanks
 on:
     issues:
         types: [opened]
-    push:
+    workflow_dispatch: # manual trigger
 
 jobs:
     thanks:
@@ -17,10 +17,14 @@ jobs:
                 github-token: ${{ secrets.GITHUB_TOKEN }}
                 script: |
                   const { issue_number } = context.issue.number || 2;
-                  console.log(`issue number : ${context.issue.issue_number}`);
+                  
                   console.log(`issue: ${JSON.stringify(context.issue)}`);
                   console.log(`issue_number: ${issue_number}`);
-                  console.log(`context: ${context.payload.issue.number}`);
+                  if (!issue_number) {
+                    issue_number =2;
+                  }
+                  console.log(`issue_number: ${issue_number}`);
+
                   const owner = context.repo.owner;
                   const repo = context.repo.repo;
 
