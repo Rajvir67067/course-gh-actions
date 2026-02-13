@@ -15,7 +15,12 @@ if (app.Environment.IsDevelopment())
 
 var newSummaries = new[]
 {
-    "Brrrrr", "Yikes", "Frozen", "Hot", "Ouch", "StopIt"
+    "Brrrrr", "Yikes", "Frozen", "Hot", "Ouch", "StopIt","StartIt"
+};
+
+var newSummarie = new[]
+{
+    "Freezing", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
 var summaries = new[]
