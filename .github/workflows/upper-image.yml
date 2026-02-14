@@ -28,5 +28,5 @@ jobs:
                   password: ${{ secrets.GITHUB_TOKEN }}
             - run: docker tag upper ghrc.io/rajvir67067/upper:latest
             - run: docker tag upper ghrc.io/rajvir67067/upper:${{ github.ref_name }}
-            - run: docker push ghrc.io/rajvir67067/upper:latest
-            - run: docker push ghrc.io/rajvir67067/upper:${{ github.ref_name }}
+            - run: docker push ghrc.io/Rajvir67067/upper:latest
+            - run: docker push ghrc.io/Rajvir67067/upper:${{ github.ref_name }}
