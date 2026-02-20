@@ -22,4 +22,5 @@ jobs:
         container:
             image: mysql:8.4
         steps:
-            - run: echo "RANDOM_PASSWORD / ${{ needs.generate.outputs.RANDOM_PASSWORD }}"
+            - run: echo "${{ needs.generate.outputs.RANDOM_PASSWORD }}"
+            - run: mysql --version
