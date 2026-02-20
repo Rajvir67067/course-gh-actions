@@ -22,7 +22,6 @@ jobs:
                 password: ${{ secrets.DOCKERHUB_PASS }}
             - run: ./build-push.sh
               working-directory: api
-              
     # deploy:
     #     runs-on: ubuntu-latest
     #     environment: 
